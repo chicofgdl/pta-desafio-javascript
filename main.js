@@ -1,14 +1,14 @@
-const character = document.getElementsByClassName("character")[0];
+const character = document.getElementsByClassName("character")[0]; //
 const containerCharacter = document.getElementsByClassName("container-character")[0];
 
 
-const VELOCITY = 10;
+const VELOCITY = 10; // declarando uma constante VELOCITY de valor 10 (para movimentar o personagem depois)
 
-const SCREEN_WIDTH = screen.width;
-const SCREEN_HEIGHT = screen.height;
+const SCREEN_WIDTH = screen.width; // definindo a largura da tela
+const SCREEN_HEIGHT = screen.height; // definindo a altura da tela
 
-let xPosition = 500;
-let yPosition = 300;
+let xPosition = 500; // variável que define a posição horizontal (do boneco)
+let yPosition = 300; // variável que define a posição vertical (do boneco)
 
 const keysAvaiable = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]
 const directions = ["turnUp", "turnLeft", "turnRight", "turnDown"];
@@ -29,7 +29,7 @@ window.addEventListener("keydown", (event) => {
 
     if(key === "ArrowUp"){
         character.classList.add("turnUp");
-        yPosition -= VELOCITY;
+        yPosition -= VELOCITY; // yPosition = yPosition - VELOCITY
     }
 
     if(key === "ArrowDown"){
@@ -47,6 +47,6 @@ window.addEventListener("keydown", (event) => {
         xPosition += VELOCITY;
     }
 
-    containerCharacter.style.top = `${yPosition}px`;
-    containerCharacter.style.left = `${xPosition}px`
+    containerCharacter.style.top = `${yPosition}px`; //y
+    containerCharacter.style.left = `${xPosition}px` //x
 });
